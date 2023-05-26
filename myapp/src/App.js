@@ -198,7 +198,7 @@ const App = () => {
                 ref={outputRef}
               />
 
-              <h6 className="mt-5">Tip!</h6>
+              <h6 className="mt-5">Some Tips!</h6>
               <ul>
                 <li>
                   Word Per Minute (WPM) is measured by calculating how many
