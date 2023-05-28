@@ -77,7 +77,7 @@ const App = () => {
       }
     }
 
-    const timeRemains = ((60 - duration) / 60).toFixed(2);
+    const timeRemains = ((300 - duration) / 300).toFixed(2);
     const _accuracy = Math.floor(((index - errorIndex) / index) * 100);
     const _wpm = Math.round(correctIndex / 5 / timeRemains);
 
@@ -109,9 +109,9 @@ const App = () => {
             <ul className="list-unstyled text-center small">
               <ItemList
                 name="WPM"
-                data={wpm}
+                data={wpm <= 0 ? wpm : Math.floor(wpm / 2)}
                 style={
-                  wpm > 0 && wpm < 20
+                  wpm >= 0 && wpm < 20
                     ? { color: "white", backgroundColor: "#eb4841" }
                     : wpm >= 20 && wpm < 40
                     ? { color: "white", backgroundColor: "#f48847" }
