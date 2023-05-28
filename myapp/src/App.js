@@ -8,7 +8,7 @@ let interval = null;
 const App = () => {
   const inputRef = useRef(null);
   const outputRef = useRef(null);
-  const [duration, setDuration] = useState(60);
+  const [duration, setDuration] = useState(300);
   const [started, setStarted] = useState(false);
   const [ended, setEnded] = useState(false);
   const [index, setIndex] = useState(0);
